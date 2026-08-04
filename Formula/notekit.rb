@@ -6,7 +6,7 @@ class Notekit < Formula
 
   on_arm do
     url "https://github.com/hiauhong/notekit-cli/releases/download/v0.1.0/notekit-darwin-arm64.tar.gz"
-    sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+    sha256 "a8ede5a2847277b13bad72d7f1c703f12c7d78dff4d47873a661033ea11cbce4"
   end
 
   on_intel do
