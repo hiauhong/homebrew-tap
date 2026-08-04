@@ -17,8 +17,9 @@ class Notekit < Formula
 
   def install
     bin.install "notekit"
-    # JXA resource bundle (fetch-notes.js / note-write.js) — must sit next to the binary
+    # JXA resource bundle must sit next to the binary symlink for Bundle.module
     (bin/"notekit_notekit.bundle").install Dir["notekit_notekit.bundle/*"]
+    (HOMEBREW_PREFIX/"bin").install_symlink bin/"notekit_notekit.bundle"
     # agent skill: installed for manual copy to ~/.agents/skills
     (share/"notekit/skills").install ".agents/skills/notekit"
   end
