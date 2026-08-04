@@ -1,12 +1,12 @@
 class Notekit < Formula
   desc "Apple Notes data pipeline CLI for AI agents"
   homepage "https://github.com/hiauhong/notekit-cli"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_arm do
-    url "https://github.com/hiauhong/notekit-cli/releases/download/v0.1.0/notekit-darwin-arm64.tar.gz"
-    sha256 "a8ede5a2847277b13bad72d7f1c703f12c7d78dff4d47873a661033ea11cbce4"
+    url "https://github.com/hiauhong/notekit-cli/releases/download/v0.1.1/notekit-darwin-arm64.tar.gz"
+    sha256 "0000000000000000000000000000000000000000000000000000000000000000"
   end
 
   on_intel do
@@ -17,7 +17,9 @@ class Notekit < Formula
 
   def install
     bin.install "notekit"
-    # agent skill: installed for future install-skill / manual copy to ~/.agents/skills
+    # JXA resource bundle (fetch-notes.js / note-write.js) — must sit next to the binary
+    (bin/"notekit_notekit.bundle").install Dir["notekit_notekit.bundle/*"]
+    # agent skill: installed for manual copy to ~/.agents/skills
     (share/"notekit/skills").install ".agents/skills/notekit"
   end
 
