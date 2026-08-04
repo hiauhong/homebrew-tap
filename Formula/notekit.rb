@@ -1,12 +1,12 @@
 class Notekit < Formula
   desc "Apple Notes data pipeline CLI for AI agents"
   homepage "https://github.com/hiauhong/notekit-cli"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_arm do
-    url "https://github.com/hiauhong/notekit-cli/releases/download/v0.1.1/notekit-darwin-arm64.tar.gz"
-    sha256 "f500be224694a9abbbfd6b4165ff591e4282eb0e446650412cb19b526a0b88b5"
+    url "https://github.com/hiauhong/notekit-cli/releases/download/v0.1.2/notekit-darwin-arm64.tar.gz"
+    sha256 "7eb0613a6e4cc6f232f7710688dd3b67e4d8f12f2c0be2d764b0e894eaeddbc5"
   end
 
   on_intel do
@@ -17,9 +17,6 @@ class Notekit < Formula
 
   def install
     bin.install "notekit"
-    # JXA resource bundle must sit next to the binary symlink for Bundle.module
-    (bin/"notekit_notekit.bundle").install Dir["notekit_notekit.bundle/*"]
-    (HOMEBREW_PREFIX/"bin").install_symlink bin/"notekit_notekit.bundle"
     # agent skill: installed for manual copy to ~/.agents/skills
     (share/"notekit/skills").install ".agents/skills/notekit"
   end
