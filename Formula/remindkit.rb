@@ -22,6 +22,17 @@ class Remindkit < Formula
     (share/"remindkit/skills").install ".agents/skills/remindkit"
   end
 
+  def caveats
+    <<~EOS
+      Install the remindkit agent skill so AI agents can discover this tool:
+
+        remindkit install-skill --agents
+
+      Run it once after install; re-run after `brew upgrade` if the skill
+      content changed in the new version.
+    EOS
+  end
+
   test do
     system "#{bin}/remindkit", "--help"
   end
