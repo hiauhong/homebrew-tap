@@ -1,12 +1,12 @@
 class Remindkit < Formula
   desc "Apple Reminders data pipeline CLI for AI agents"
   homepage "https://github.com/hiauhong/remindkit-cli"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   on_arm do
-    url "https://github.com/hiauhong/remindkit-cli/releases/download/v0.2.1/remindkit-darwin-arm64.tar.gz"
-    sha256 "8a628c2839610b55ea69f7279853367ec2c3a416356d838a1a6e28b10231bbe1"
+    url "https://github.com/hiauhong/remindkit-cli/releases/download/v0.2.2/remindkit-darwin-arm64.tar.gz"
+    sha256 "daa97134c194d16393601dfcde34e40595ccc102596557d4a14e5615146389f8"
   end
 
   on_intel do
