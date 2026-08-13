@@ -24,12 +24,15 @@ class Remindkit < Formula
 
   def caveats
     <<~EOS
-      Install the remindkit agent skill so AI agents can discover this tool:
+      The remindkit agent skill is auto-synced on every run:
+      missing → installed, outdated → updated (after `brew upgrade`
+      the skill follows the new version automatically).
 
-        remindkit install-skill --agents
+      For other agent dirs (e.g. Claude Code):
 
-      Run it once after install; re-run after `brew upgrade` if the skill
-      content changed in the new version.
+        remindkit install-skill --claude
+
+      Disable auto-sync with REMINDKIT_NO_AUTO_SKILL=1.
     EOS
   end
 
