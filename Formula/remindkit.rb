@@ -1,12 +1,12 @@
 class Remindkit < Formula
   desc "Apple Reminders data pipeline CLI for AI agents"
   homepage "https://github.com/hiauhong/remindkit-cli"
-  version "0.3.5"
+  version "0.3.6"
   license "MIT"
 
   on_arm do
-    url "https://github.com/hiauhong/remindkit-cli/releases/download/v0.3.5/remindkit-darwin-arm64.tar.gz"
-    sha256 "0640bf0c5b47dd3d1a8b1b0a0546c557a5333185e0c9307872f7c69d39a4c2b3"
+    url "https://github.com/hiauhong/remindkit-cli/releases/download/v0.3.6/remindkit-darwin-arm64.tar.gz"
+    sha256 "c35b7912e37d29a4c7fd124a5991edfd59a5dd54cc815e298973d5a0911cd930"
   end
 
   on_intel do
@@ -25,8 +25,8 @@ class Remindkit < Formula
   # pours it and skips those checks entirely. Rebuilt and re-uploaded by
   # remindkit-cli's release workflow on every tag.
   bottle do
-    root_url "https://github.com/hiauhong/remindkit-cli/releases/download/v0.3.5"
-    sha256 cellar: :any_skip_relocation, all: "bee59e6304bf9803f09f71d801a03bfc783cf2e75e7c39b85362dc296b733216"
+    root_url "https://github.com/hiauhong/remindkit-cli/releases/download/v0.3.6"
+    sha256 cellar: :any_skip_relocation, all: "ed84abeba13d0dfcdcd39913a4ff077b1407271878b3d34e977456b25f926e74"
   end
 
   depends_on arch: :arm64
