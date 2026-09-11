@@ -15,6 +15,22 @@ class Remindkit < Formula
     end
   end
 
+  # Prebuilt-binary bottle, deliberately tagged `all`.
+  #
+  # This formula only copies prebuilt binaries — it compiles nothing. Without a
+  # matching bottle Homebrew treats the install as a source build and runs
+  # `fatal_build_from_source_checks`, which demands an Xcode whose major version
+  # matches the running macOS (e.g. macOS 27 + Xcode 26 → hard failure, even
+  # though no compiler is ever used). An `all` bottle matches every tag, so brew
+  # pours it and skips those checks entirely. Rebuilt and re-uploaded by
+  # remindkit-cli's release workflow on every tag.
+  bottle do
+    root_url "https://github.com/hiauhong/remindkit-cli/releases/download/v0.3.5"
+    sha256 cellar: :any_skip_relocation, all: "bee59e6304bf9803f09f71d801a03bfc783cf2e75e7c39b85362dc296b733216"
+  end
+
+  depends_on arch: :arm64
+
   def install
     bin.install "remindkit"
     bin.install "fetch-remindkit"
