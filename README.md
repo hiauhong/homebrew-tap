@@ -4,7 +4,7 @@
 
 个人 Homebrew tap：存放我自己的 macOS CLI 工具公式。两个公式都**只分发预编译的 Apple Silicon 二进制**，安装时从下载的 tar 包里直接拷贝可执行文件，不编译源码。
 
-> 🎨 **Vibe coding 项目**：功能、测试与文档由 AI agent 协作产出（vibe coding），**未经人工逐行审查，请谨慎用于生产环境**。
+> 🤖 **Vibe coding 项目**：功能、测试与文档由 AI agent 协作产出（vibe coding），**未经人工逐行审查，请谨慎用于生产环境**。
 
 ## 安装
 
