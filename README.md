@@ -2,7 +2,7 @@
 
 [![Vibe coded](https://img.shields.io/badge/vibe-coded-%23ff69b4?style=flat-square)](https://en.wikipedia.org/wiki/Vibe_coding)
 
-个人 Homebrew tap：存放我自己的 macOS CLI 工具公式。两个公式都**只分发预编译二进制**（Apple Silicon），安装时不编译任何东西，因此**不需要 Xcode**。
+个人 Homebrew tap：存放我自己的 macOS CLI 工具公式。两个公式都**只分发预编译的 Apple Silicon 二进制**，安装时从下载的 tar 包里直接拷贝可执行文件，不编译源码。
 
 > 🎨 本项目由 **vibe coding**(AI 辅助开发)驱动——功能、测试与文档均在 AI agent 协作下迭代产出。
 
@@ -39,6 +39,8 @@ brew install remindkit notekit
 remindkit doctor    # 检查权限与数据源
 notekit doctor      # 检查权限（首次会弹授权框，点「允许」）
 ```
+
+> **关于 Xcode**：`remindkit` 公式带一个 `all` 瓶（bottle），Homebrew 会直接倒瓶、跳过「从源码构建」的前置检查；`notekit` 目前没有发瓶，安装时 Homebrew 仍可能要求本机有可用的 Xcode（仅前置检查，实际不编译）。若报 Xcode 版本相关的 `fatal_build_from_source_checks`，请先升级/切换 Xcode，或从源码仓库自行构建。
 
 ## 升级 / 卸载
 
